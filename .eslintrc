@@ -17,6 +17,12 @@
   },
   "ignorePatterns": [".eslintrc"],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "quotes": [
       "warn",
       "single"

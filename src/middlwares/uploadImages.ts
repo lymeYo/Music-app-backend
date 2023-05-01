@@ -8,7 +8,14 @@ const storage = multer.diskStorage({
     cb(null, imagesPath)
   },
   filename(req, file, cb) {
-    cb(null, new Date().toISOString() + '-' + path.extname(file.originalname))
+    console.log('here !')
+
+    cb(
+      null,
+      new Date().toISOString().replace(/:/g, '-') +
+        '-' +
+        path.extname(file.originalname),
+    )
   },
 })
 

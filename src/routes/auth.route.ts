@@ -1,5 +1,7 @@
-import { Router, Request, Responce } from 'express'
-import { login, registration } from '../controllers/auth.controller'
+import { Router, urlencoded } from 'express'
+import { registration } from '../controllers/auth/registration.controller'
+import { login } from '../controllers/auth/login.controller'
+import bodyParser from 'body-parser'
 
 const router = Router()
 
